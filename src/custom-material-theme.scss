@@ -1,0 +1,77 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$custom-material-primary: mat-palette($mat-teal);
+$custom-material-accent: mat-palette($mat-blue-gray);
+$custom-material-warn: mat-palette($mat-deep-orange);
+
+$custom-material-theme: mat-light-theme($custom-material-primary, $custom-material-accent, $custom-material-warn);
+
+@include angular-material-theme($custom-material-theme);
+
+$shadow: rgba(35, 37, 51, 0.1) 0px 2px 4px 0px, rgba(35, 37, 51, 0.2) 0px 0px 2px 0px;
+
+// mat-icon
+mat-icon {
+  font-family: 'Material Icons', serif !important;
+}
+
+// mat-chip
+.mat-standard-chip {
+  border-radius: 0 !important;
+}
+
+// mat-button
+button {
+  border-radius: 0 !important;
+}
+
+// mat-card
+mat-card {
+  border-radius: 0 !important;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: $shadow;
+}
+
+// mat-menu
+.mat-menu-panel {
+  border-radius: 0 !important;
+  box-shadow: $shadow;
+}
+
+// mat-select
+.mat-select-panel {
+  border-radius: 0 !important;
+}
+
+.mat-select-panel:not([class*=mat-elevation-z]) {
+  box-shadow: $shadow;
+}
+
+// mat-date-picker
+.mat-datepicker-content {
+  box-shadow: $shadow;
+  border-radius: 0 !important;
+}
+
+// mat-according
+mat-accordion, mat-expansion-panel {
+  border-radius: 0 !important;
+}
+
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+  box-shadow: $shadow;
+}
+
+// mat-header
+.header-container {
+  box-shadow: $shadow;
+}
+
+// snack-bar
+.mat-snack-bar-container {
+  border-radius: 0 !important;
+}
