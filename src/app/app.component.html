@@ -1,0 +1,13 @@
+<mat-progress-bar *ngIf="loading" mode="indeterminate" class="app-loading-bar"></mat-progress-bar>
+<div *ngIf="loading" class="app-loading-mask"></div>
+
+
+<div *ngIf="pressAndHold > 0" class="app-press-and-hold-container">
+  <div class="app-press-and-hold-content">
+    <span>Press and hold to confirm</span>
+    <mat-progress-spinner color="accent" mode="determinate" [value]="pressAndHold" [diameter]="25"></mat-progress-spinner>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>

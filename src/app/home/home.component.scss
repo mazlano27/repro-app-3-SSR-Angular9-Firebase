@@ -1,0 +1,11 @@
+.home-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto;
+
+  img {
+    align-self: center;
+    justify-self: center;
+    height: 150px;
+  }
+}
