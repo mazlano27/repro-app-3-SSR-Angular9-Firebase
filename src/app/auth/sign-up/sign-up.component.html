@@ -1,0 +1,38 @@
+<div class="sign-up-component">
+    <mat-card class="sign-up-card">
+        <mat-card-title>
+            Create account
+        </mat-card-title>
+        <mat-card-subtitle>
+            &nbsp;
+        </mat-card-subtitle>
+        <mat-card-content>
+            <form [formGroup]="signUpForm" (ngSubmit)="submitRegistrationForm()">
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input type="email"
+                           formControlName="email"
+                           matInput
+                           placeholder="Email address">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input type="password"
+                           formControlName="password"
+                           matInput
+                           placeholder="Password">
+                </mat-form-field>
+                <div class="button-container">
+                    <button
+                            [disabled]="signUpForm.invalid"
+                            color="primary"
+                            mat-flat-button>
+                        <strong>Create your account</strong>
+                        <mat-icon>navigate_next</mat-icon>
+                    </button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
+

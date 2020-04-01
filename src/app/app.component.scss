@@ -1,0 +1,46 @@
+.app-loading-bar {
+  position: fixed;
+  z-index: 1000001;
+}
+
+.app-loading-mask {
+  position: fixed; /* Stay in place */
+  z-index: 1000000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.app-press-and-hold-container {
+  display: grid;
+  grid-template-rows: auto;
+  position: fixed;
+  width: 100vw;
+  z-index: 1000000;
+
+  .app-press-and-hold-content {
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+    margin-top: 70px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1rem;
+
+    span {
+      align-self: center;
+      justify-self: start;
+    }
+
+    mat-progress-spinner {
+      align-self: center;
+      justify-self: end;
+    }
+  }
+}

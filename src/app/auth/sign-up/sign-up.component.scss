@@ -1,0 +1,30 @@
+.sign-up-component {
+  display: grid;
+  grid-template-rows: auto;
+  padding: 1rem;
+
+  .sign-up-card {
+    align-self: center;
+    justify-self: center;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 450px;
+
+    mat-card-content{
+      form {
+        display: grid;
+        grid-template-rows: auto;
+        grid-gap: 10px;
+
+        .button-container {
+          display: grid;
+
+          button {
+            align-self: center;
+            justify-self: right;
+          }
+        }
+      }
+    }
+  }
+}

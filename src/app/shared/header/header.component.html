@@ -1,0 +1,23 @@
+<div class="header-container">
+    <mat-toolbar>
+        <button mat-flat-button color="primary" [matMenuTriggerFor]="menu">
+            My Account
+            <mat-icon>arrow_drop_down</mat-icon>
+        </button>
+    </mat-toolbar>
+    <mat-menu #menu="matMenu" overlapTrigger="false" class="toolbar-menu">
+        <button mat-menu-item
+                routerLink="/auth/sign-in"
+                *ngIf="authService.guest">
+            Sign in
+        </button>
+        <button mat-menu-item
+                routerLink="/auth/sign-up"
+                *ngIf="authService.guest">
+            Sign up
+        </button>
+        <button mat-menu-item (click)="signOut()" *ngIf="!authService.guest">
+            Sign out
+        </button>
+    </mat-menu>
+</div>
